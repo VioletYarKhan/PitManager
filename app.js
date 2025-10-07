@@ -83,8 +83,17 @@ addItemButton.addEventListener('click', () => {
     const items = loadChecklistTemplate();
     items.push(text);
     saveChecklistTemplate(items);
-    renderChecklist(items);
+    renderChecklist(items); // refresh checklist with new item
     newItemText.value = "";
+
+    // Update existing saved matches with the new item unchecked
+    Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('match_')) {
+            const matchData = JSON.parse(localStorage.getItem(key));
+            matchData.checklist[`check-${items.length - 1}`] = false;
+            localStorage.setItem(key, JSON.stringify(matchData));
+        }
+    });
 });
 
 // Fetch matches from TBA
