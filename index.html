@@ -11,29 +11,30 @@
         <h1>FRC Pit Manager</h1>
     </header>
 
-   <section id="match-section">
+    <section id="match-section">
         <label for="team-number">Team Number:</label>
         <input type="number" id="team-number" placeholder="Enter your team number">
 
         <label for="event-code">Event Code:</label>
-        <input type="text" id="event-code" placeholder="Ex: 2025miket">
+        <input type="text" id="event-code" placeholder="Ex: 2025tnkn">
 
         <button id="load-matches">Load Matches</button>
-        </section>
+        <button id="clear-data">Clear Data</button>
+    </section>
 
-        <section id="matches-list-section">
-            <h2>Upcoming Matches</h2>
-            <ul id="matches-list"></ul>
+    <section id="matches-list-section">
+        <h2>Upcoming Matches</h2>
+        <ul id="matches-list"></ul>
     </section>
 
     <section id="checklist-section">
-        <h2>Pre-Match Checklist</h2>
-        <ul id="checklist">
-            <li><input type="checkbox" id="robot-check"> Systems Check</li>
-            <li><input type="checkbox" id="battery-check"> Battery Charged</li>
-            <li><input type="checkbox" id="driverstation-check"> Driver Station Setup/Charged</li>
-            <li><input type="checkbox" id="strategy-check"> Strategy Discussion</li>
-        </ul>
+        <h2>Pre-Match Checklist - Match <span id="current-match-number">#</span></h2>
+        <button id="toggle-edit">Edit Checklist</button>
+        <ul id="checklist"></ul>
+        <div id="checklist-controls" style="display: none;">
+            <input type="text" id="new-item-text" placeholder="Add new checklist item">
+            <button id="add-item">Add Item</button>
+        </div>
     </section>
 
     <section id="notes-section">    
