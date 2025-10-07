@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRC Pit Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FRC Pit Manager</h1>
+    </header>
+
+   <section id="match-section">
+        <label for="team-number">Team Number:</label>
+        <input type="number" id="team-number" placeholder="Enter your team number">
+
+        <label for="event-code">Event Code:</label>
+        <input type="text" id="event-code" placeholder="Ex: 2025miket">
+
+        <button id="load-matches">Load Matches</button>
+        </section>
+
+        <section id="matches-list-section">
+            <h2>Upcoming Matches</h2>
+            <ul id="matches-list"></ul>
+    </section>
+
+    <section id="checklist-section">
+        <h2>Pre-Match Checklist</h2>
+        <ul id="checklist">
+            <li><input type="checkbox" id="robot-check"> Systems Check</li>
+            <li><input type="checkbox" id="battery-check"> Battery Charged</li>
+            <li><input type="checkbox" id="driverstation-check"> Driver Station Setup/Charged</li>
+            <li><input type="checkbox" id="strategy-check"> Strategy Discussion</li>
+        </ul>
+    </section>
+
+    <section id="notes-section">    
+        <h2>Notes</h2>
+        <textarea id="match-notes" placeholder="Enter notes here..."></textarea>
+        <button id="save-notes">Save Notes</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
