@@ -119,7 +119,7 @@ loadMatchesButton.addEventListener('click', async () => {
             .sort((a, b) => a.match_number - b.match_number)
             .forEach(match => {
                 const li = document.createElement('li');
-                li.textContent = `Match ${match.match_number} - ${match.alliances.red.team_keys.includes(`frc${teamNumber}`) ? 'Red' : 'Blue'}`;
+                li.textContent = `Match ${match.match_number} - ${match.alliances.red.team_keys.includes(`frc${teamNumber}`) ? 'Red' : 'Blue'} - ${match.alliances.red.team_keys.concat(" vs. ").concat(match.alliances.blue.team_keys).join(' ').replace(/frc/g, '')}`;
                 li.style.cursor = 'pointer';
                 li.addEventListener('click', () => loadMatchData(match.match_number));
                 matchesList.appendChild(li);
